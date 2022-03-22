@@ -1,0 +1,21 @@
+<mvc:View   controllerName="SAPUI5.invoices.controller.HelloPanel"
+            xmlns="sap.m" 
+            xmlns:mvc="sap.ui.core.mvc"
+            xmlns:core="sap.ui.core"
+            displayBlock="true">
+             <Panel headerText="{i18n>titlePanel}" class="sapUiResponsiveMargin" width="auto">  
+                <content>  
+                    <Button id="helloDialogButton" 
+                            icon="sap-icon://action" 
+                            text="{i18n>helloDialogBut}" 
+                            press=".onOpenDialog" 
+                            class="sapUiSmallMarginEnd"/>
+                    <Button text="{i18n>SayHello}" press="onShowHello" class="sapUiSmallMarginEnd"/>
+                    <Input value="{/recipient/name}"                                           
+                           valueLiveUpdate="true"
+                           width="60%"/>
+                    <Text text="Hello {/recipient/name}" class="sapUiSmallMargin boldElements"/>           
+                </content>
+            </Panel> 
+            <core:Fragment fragmentName="SAPUI5.invoices.view.Form01" type="XML"/>
+</mvc:View>

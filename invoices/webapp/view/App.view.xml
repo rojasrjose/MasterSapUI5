@@ -1,0 +1,17 @@
+<mvc:View   controllerName="SAPUI5.invoices.controller.App"
+            xmlns="sap.m" 
+            xmlns:mvc="sap.ui.core.mvc"
+            displayBlock="true">
+    <Shell >          
+        <App>
+            <pages>
+                <Page title="{i18n>titlePage}">        
+                    <content>   
+                       <mvc:XMLView viewName="SAPUI5.invoices.view.HelloPanel" />
+                       <mvc:XMLView viewName="SAPUI5.invoices.view.InvoicesList" />
+                    </content>        
+                </Page>        
+            </pages>    
+        </App>      
+    </Shell>   
+</mvc:View>
