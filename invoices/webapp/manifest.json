@@ -13,13 +13,13 @@
     "ach": "ach",
     "dataSources": {
       "mainService": {
-            "uri": "/V2/Northwind/Northwind.svc/",
-            "type": "OData",
-            "settings": {
-              "odataVersion": "2.0",
-              "localUri": "localService/metadata.xml"
-            }
-          },  
+        "uri": "/V2/Northwind/Northwind.svc/",
+        "type": "OData",
+        "settings": {
+          "odataVersion": "2.0",
+          "localUri": "localService/metadata.xml"
+        }
+      },
       "mService": {
         "uri": "/sap/opu/odata/",
         "type": "OData",
@@ -28,8 +28,15 @@
           "localUri": "localService/metadata.xml",
           "odataVersion": "4.0"
         }
+      },
+      "Northwind.svc": {
+        "uri": "Northwind/V2/Northwind/Northwind.svc/",
+        "type": "OData",
+        "settings": {
+          "odataVersion": "2.0",
+          "localUri": "localService/metadata.xml"
+        }
       }
-      
     }
   },
   "sap.ui": {
@@ -81,6 +88,15 @@
       },
       "northwind": {
         "dataSource": "mainService",
+        "preload": true,
+        "settings": {
+          "defaultBindingMode": "TwoWay",
+          "defaultCountMode": "Inline",
+          "refreshAfterChange": false
+        }
+      },
+      "": {
+        "dataSource": "Northwind.svc",
         "preload": true,
         "settings": {
           "defaultBindingMode": "TwoWay",

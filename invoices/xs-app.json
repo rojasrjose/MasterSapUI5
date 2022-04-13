@@ -1,10 +1,10 @@
 {
   "authenticationMethod": "none",
-  "routes": [
+  "routes": [    
     {
       "authenticationType": "none",
       "csrfProtection": false,
-      "source": "^/Northwind/(.*)$",      
+      "source": "^/Northwind/(.*)$",
       "destination": "Northwind",
       "target": "$1"
     }

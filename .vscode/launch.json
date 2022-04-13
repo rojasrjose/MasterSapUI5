@@ -1,112 +1,99 @@
 {
-  "inputs": [
-    {
-      "id": "UI5MinVersion1.65.0",
-      "type": "command",
-      "command": "sap.ux.appGenerator.ui5Version",
-      "args": {
-        "minUI5Version": "1.65.0"
-      }
-    }
-  ],
-  "configurations": [
-    {
-      "name": "SAPUI5",
-      "cwd": "${workspaceFolder}/invoices",
-      "runtimeArgs": [
-        "fiori",
-        "run"
-      ],
-      "type": "node",
-      "request": "launch",
-      "runtimeExecutable": "npx",
-      "args": [
-        "--open",
-        "index.html"
-      ],
-      "windows": {
-        "runtimeExecutable": "npx.cmd"
-      },
-      "console": "internalConsole",
-      "internalConsoleOptions": "openOnSessionStart",
-      "env": {
-        "FIORI_TOOLS_BACKEND_CONFIG": "[{\"path\":\"/V2\",\"destination\":\"Northwind\"}]",
-        "run.config": "{\"handlerId\":\"fiori_tools\",\"runnableId\":\"/home/user/projects/invoices\"}"
-      }
-    },
-    {
-      "name": "MockServer SAPUI5",
-      "cwd": "${workspaceFolder}/invoices",
-      "runtimeArgs": [
-        "fiori",
-        "run"
-      ],
-      "type": "node",
-      "request": "launch",
-      "runtimeExecutable": "npx",
-      "args": [
-        "--open",
-        "test/mockServer.html"
-      ],
-      "windows": {
-        "runtimeExecutable": "npx.cmd"
-      },
-      "console": "internalConsole",
-      "internalConsoleOptions": "openOnSessionStart",
-      "env": {
-        "FIORI_TOOLS_BACKEND_CONFIG": "[{\"path\":\"/sap\",\"destination\":\"Northwind\"}]",
-        "run.config": "{\"handlerId\":\"fiori_tools\",\"runnableId\":\"/home/user/projects/invoices\"}"
-      }
-    },
-    {
-      "name": "Test SAPUI5",
-      "cwd": "${workspaceFolder}/invoices",
-      "runtimeArgs": [
-        "fiori",
-        "run"
-      ],
-      "type": "node",
-      "request": "launch",
-      "runtimeExecutable": "npx",
-      "args": [
-        "--open",
-        "test/unit/unitTests.qunit.html"
-      ],
-      "windows": {
-        "runtimeExecutable": "npx.cmd"
-      },
-      "console": "internalConsole",
-      "internalConsoleOptions": "openOnSessionStart",
-      "env": {
-        "FIORI_TOOLS_BACKEND_CONFIG": "[{\"path\":\"/sap\",\"destination\":\"Northwind\"}]",
-        "run.config": "{\"handlerId\":\"fiori_tools\",\"runnableId\":\"/home/user/projects/invoices\"}"
-      }
-    },
-    {
-      "name": "Integration Test SAPUI5",
-      "cwd": "${workspaceFolder}/invoices",
-      "runtimeArgs": [
-        "fiori",
-        "run"
-      ],
-      "type": "node",
-      "request": "launch",
-      "runtimeExecutable": "npx",
-      "args": [
-        "--open",
-        "test/integration/opaTests.qunit.html"
-      ],
-      "windows": {
-        "runtimeExecutable": "npx.cmd"
-      },
-      "console": "internalConsole",
-      "internalConsoleOptions": "openOnSessionStart",
-      "env": {
-        "FIORI_TOOLS_BACKEND_CONFIG": "[{\"path\":\"/sap\",\"destination\":\"Northwind\"}]",
-        "run.config": "{\"handlerId\":\"fiori_tools\",\"runnableId\":\"/home/user/projects/invoices\"}"
-      }
-    }
-  ],
-  "compounds": [],
-  "version": "0.2.0"
+    "inputs": [
+        {
+            "id": "UI5MinVersion1.65.0",
+            "type": "command",
+            "command": "sap.ux.appGenerator.ui5Version",
+            "args": {
+                "minUI5Version": "1.65.0"
+            }
+        }
+    ],
+    "configurations": [
+        {
+            "name": "employees",
+            "cwd": "${workspaceFolder}/logali/employees",
+            "runtimeArgs": [
+                "fiori",
+                "run"
+            ],
+            "type": "node",
+            "request": "launch",
+            "runtimeExecutable": "npx",
+            "args": [
+                "--open",
+                "index.html"
+            ],
+            "windows": {
+                "runtimeExecutable": "npx.cmd"
+            },
+            "console": "internalConsole",
+            "internalConsoleOptions": "openOnSessionStart",
+            "outputCapture": "std",
+            "env": {
+                "FIORI_TOOLS_UI5_VERSION": "",
+                "FIORI_TOOLS_UI5_URI": "https://ui5.sap.com",
+                "FIORI_TOOLS_URL_PARAMS": "sap-ui-xx-viewCache=false",
+                "run.config": "{\"handlerId\":\"fiori_tools\",\"runnableId\":\"/home/user/projects/logali/employees\"}",
+                "FIORI_TOOLS_BACKEND_CONFIG": "[{\"path\":\"/v2\",\"destination\":\"Northwind\"}]"
+            }
+        },
+        {
+            "name": "Start invoices",
+            "type": "node",
+            "request": "launch",
+            "runtimeExecutable": "npx",
+            "cwd": "${workspaceFolder}/invoices",
+            "windows": {
+                "runtimeExecutable": "npx.cmd"
+            },
+            "runtimeArgs": [
+                "fiori",
+                "run"
+            ],
+            "args": [
+                "--open",
+                "test/flpSandbox.html#SAPUI5invoices-display"
+            ],
+            "console": "internalConsole",
+            "internalConsoleOptions": "openOnSessionStart",
+            "outputCapture": "std",
+            "port": 9229,
+            "env": {
+                "DEBUG": "--inspect",
+                "FIORI_TOOLS_URL_PARAMS": "sap-ui-xx-viewCache=false",
+                "run.config": "{\"handlerId\":\"fiori_tools\",\"runnableId\":\"/home/user/projects/invoices\"}"
+            }
+        },
+        {
+            "name": "Start invoices Local",
+            "type": "node",
+            "request": "launch",
+            "cwd": "${workspaceFolder}/invoices",
+            "runtimeExecutable": "npx",
+            "windows": {
+                "runtimeExecutable": "npx.cmd"
+            },
+            "runtimeArgs": [
+                "fiori",
+                "run"
+            ],
+            "args": [
+                "--config",
+                "./ui5-local.yaml",
+                "--open",
+                "test/flpSandbox.html#SAPUI5invoices-display"
+            ],
+            "console": "internalConsole",
+            "internalConsoleOptions": "openOnSessionStart",
+            "outputCapture": "std",
+            "port": 9229,
+            "env": {
+                "FIORI_TOOLS_URL_PARAMS": "sap-ui-xx-viewCache=false",
+                "run.config": "{\"handlerId\":\"fiori_tools\",\"runnableId\":\"/home/user/projects/invoices\"}"
+            }
+        }
+    ],
+    "compounds": [],
+    "version": "0.2.0"
 }
