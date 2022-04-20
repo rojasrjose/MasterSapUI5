@@ -9,7 +9,9 @@ sap.ui.define([
 
         return Controller.extend("SAPUI5.invoices.controller.App", {
 
-            onInit: function () {}
+            onInit: function () {
+                this.getView().addStyleClass(this.getOwnerComponent().getContentDensityClass());
+            }
 
         });
     });

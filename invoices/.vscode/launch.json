@@ -37,80 +37,79 @@
         "FIORI_TOOLS_URL_PARAMS": ""
       }
     },
-
     {
-        "name": "MockServer SAPUI5",
-        "cwd": "${workspaceFolder}",
-        "runtimeArgs": [
-          "fiori",
-          "run"
-        ],
-        "type": "node",
-        "request": "launch",
-        "runtimeExecutable": "npx",
-        "args": [
-          "--open",
-          "test/mockServer.html"
-        ],
-        "windows": {
-          "runtimeExecutable": "npx.cmd"
-        },
-        "console": "internalConsole",
-        "internalConsoleOptions": "openOnSessionStart",
-        "env": {
-          "FIORI_TOOLS_BACKEND_CONFIG": "[{\"path\":\"/sap\",\"destination\":\"Northwind\"}]",
-          "run.config": "{\"handlerId\":\"fiori_tools\",\"runnableId\":\"/home/user/projects/invoices\"}"
-        }
+      "name": "MockServer SAPUI5",
+      "cwd": "${workspaceFolder}",
+      "runtimeArgs": [
+        "fiori",
+        "run"
+      ],
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "npx",
+      "args": [
+        "--open",
+        "test/mockServer.html"
+      ],
+      "windows": {
+        "runtimeExecutable": "npx.cmd"
       },
-      {
-        "name": "Test SAPUI5",
-        "cwd": "${workspaceFolder}",
-        "runtimeArgs": [
-          "fiori",
-          "run"
-        ],
-        "type": "node",
-        "request": "launch",
-        "runtimeExecutable": "npx",
-        "args": [
-          "--open",
-          "test/unit/unitTests.qunit.html"
-        ],
-        "windows": {
-          "runtimeExecutable": "npx.cmd"
-        },
-        "console": "internalConsole",
-        "internalConsoleOptions": "openOnSessionStart",
-        "env": {
-          "FIORI_TOOLS_BACKEND_CONFIG": "[{\"path\":\"/sap\",\"destination\":\"Northwind\"}]",
-          "run.config": "{\"handlerId\":\"fiori_tools\",\"runnableId\":\"/home/user/projects/invoices\"}"
-        }
-      },
-      {
-        "name": "Integration Test SAPUI5",
-        "cwd": "${workspaceFolder}",
-        "runtimeArgs": [
-          "fiori",
-          "run"
-        ],
-        "type": "node",
-        "request": "launch",
-        "runtimeExecutable": "npx",
-        "args": [
-          "--open",
-          "test/integration/opaTests.qunit.html"
-        ],
-        "windows": {
-          "runtimeExecutable": "npx.cmd"
-        },
-        "console": "internalConsole",
-        "internalConsoleOptions": "openOnSessionStart",
-        "env": {
-          "FIORI_TOOLS_BACKEND_CONFIG": "[{\"path\":\"/sap\",\"destination\":\"Northwind\"}]",
-          "run.config": "{\"handlerId\":\"fiori_tools\",\"runnableId\":\"/home/user/projects/invoices\"}"
-        }
+      "console": "internalConsole",
+      "internalConsoleOptions": "openOnSessionStart",
+      "env": {
+        "FIORI_TOOLS_BACKEND_CONFIG": "[{\"path\":\"/sap\",\"destination\":\"Northwind\"}]",
+        "run.config": "{\"handlerId\":\"fiori_tools\",\"runnableId\":\"/home/user/projects/invoices\"}"
       }
-  ],  
+    },
+    {
+      "name": "Test SAPUI5",
+      "cwd": "${workspaceFolder}",
+      "runtimeArgs": [
+        "fiori",
+        "run"
+      ],
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "npx",
+      "args": [
+        "--open",
+        "test/unit/unitTests.qunit.html"
+      ],
+      "windows": {
+        "runtimeExecutable": "npx.cmd"
+      },
+      "console": "internalConsole",
+      "internalConsoleOptions": "openOnSessionStart",
+      "env": {
+        "FIORI_TOOLS_BACKEND_CONFIG": "[{\"path\":\"/sap\",\"destination\":\"Northwind\"}]",
+        "run.config": "{\"handlerId\":\"fiori_tools\",\"runnableId\":\"/home/user/projects/invoices\"}"
+      }
+    },
+    {
+      "name": "Integration Test SAPUI5",
+      "cwd": "${workspaceFolder}",
+      "runtimeArgs": [
+        "fiori",
+        "run"
+      ],
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "npx",
+      "args": [
+        "--open",
+        "test/integration/opaTests.qunit.html"
+      ],
+      "windows": {
+        "runtimeExecutable": "npx.cmd"
+      },
+      "console": "internalConsole",
+      "internalConsoleOptions": "openOnSessionStart",
+      "env": {
+        "FIORI_TOOLS_BACKEND_CONFIG": "[{\"path\":\"/sap\",\"destination\":\"Northwind\"}]",
+        "run.config": "{\"handlerId\":\"fiori_tools\",\"runnableId\":\"/home/user/projects/invoices\"}"
+      }
+    }
+  ],
   "compounds": [],
   "version": "0.2.0"
 }

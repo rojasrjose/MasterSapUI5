@@ -1,0 +1,20 @@
+<mvc:View   controllerName="SAPUI5.invoices.controller.App"
+            xmlns="sap.m" 
+            xmlns:mvc="sap.ui.core.mvc"
+            xmlns:core="sap.ui.core"
+            displayBlock="true">            
+                <Page title="{i18n>titlePage}">   
+                    <landmarkInfo> 
+                        <PageAccessibleLandmarkInfo rootRole="Region"
+                                                    rootLabel="{i18n>overviewRootLabel}"
+                                                    contentRole="Main"
+                                                    contentLabel="{i18n>overviewContentLabel}"
+                                                    headerRole="Banner"
+                                                    headerLabel="{i18n>overviewHeaderLabel}"/>
+                    </landmarkInfo>      
+                    <content>   
+                       <mvc:XMLView viewName="SAPUI5.invoices.view.HelloPanel" />
+                       <mvc:XMLView viewName="SAPUI5.invoices.view.InvoicesList" />
+                    </content>        
+                </Page>                   
+</mvc:View>
